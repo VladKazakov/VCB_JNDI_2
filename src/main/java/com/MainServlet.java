@@ -51,7 +51,7 @@ public class MainServlet extends HttpServlet {
 
 
 
-        req.setAttribute("zayavka", zayavkas);
+        req.setAttribute("zayavkas", zayavkas);
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/list.jsp");
         dispatcher.forward(req, resp);

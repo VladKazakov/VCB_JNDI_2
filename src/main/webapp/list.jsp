@@ -1,4 +1,3 @@
-<%@ page import="java.util.Date" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -12,12 +11,8 @@
 <body>
 
 <c:forEach items="${zayavkas}" var="zayavka">
-    <c:out value="${fullName}"/>
-    ${zayavka.id}
-    ${fullName}
-    <c:out value="${zayavka.fullName}"/>
+    <tr>${zayavka.id}</tr>
+    <tr>${zayavka.fullName}</tr>
 </c:forEach>
-
-
 </body>
 </html>
