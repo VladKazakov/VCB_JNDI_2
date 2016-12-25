@@ -9,7 +9,7 @@
     <title>List</title>
 </head>
 <body>
-
+<%--<c:if test="${empty zayavkas}">Zayavkas is empty</c:if>--%>
 <c:forEach items="${zayavkas}" var="zayavka">
     <tr>${zayavka.id}</tr>
     <tr>${zayavka.fullName}</tr>
