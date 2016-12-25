@@ -4,6 +4,13 @@
 	     http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
   <display-name>Archetype Created Web Application</display-name>
+  <resource-ref>
+    <res-ref-name>jdbc/zayavkatest</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+
+
   <servlet>
     <servlet-name>MainServlet</servlet-name>
     <servlet-class>com.MainServlet</servlet-class>

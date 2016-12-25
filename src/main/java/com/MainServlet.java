@@ -19,21 +19,13 @@ import java.util.List;
  */
 public class MainServlet extends HttpServlet {
 
-   /* @Override
-    public void init() throws ServletException {
-        connJdbc = new ConnectionJdbc();
-        connJdbc.init();
-    }*/
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ConnectionJdbc connJdbc;
-        connJdbc = new ConnectionJdbc();
-        connJdbc.init();
+        ConnectionJdbc connJdbc = new ConnectionJdbc();
         List<Zayavka> zayavkas = new ArrayList<Zayavka>();
 
-        try {
-            try(Connection conn = connJdbc.getConnect();
+
+        try(Connection conn = connJdbc.openAcces();
                 PreparedStatement pstmn = conn.prepareStatement("SELECT * FROM zayavka");
                 ResultSet rs = pstmn.executeQuery()){
 
@@ -45,7 +37,7 @@ public class MainServlet extends HttpServlet {
                     System.out.println(zayavka.getId() + " " + zayavka.getFullName());
                 }
             }
-        } catch (SQLException e) {
+         catch (SQLException e) {
             e.printStackTrace();
         }
 

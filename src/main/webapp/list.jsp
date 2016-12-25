@@ -9,10 +9,28 @@
     <title>List</title>
 </head>
 <body>
-<%--<c:if test="${empty zayavkas}">Zayavkas is empty</c:if>--%>
-<c:forEach items="${zayavkas}" var="zayavka">
-    <tr>${zayavka.id}</tr>
-    <tr>${zayavka.fullName}</tr>
-</c:forEach>
+<table>
+    <tr>
+        <td>ID</td>
+
+        <td>Полное имя</td>
+    </tr>
+
+
+    <c:forEach items="${zayavkas}" var="zayavka">
+    <tr>
+        <td>${zayavka.id}</td>
+
+        <td>${zayavka.fullName}</td>
+    </tr>
+
+    </c:forEach>
+</table>
+
+
+
+
+
+
 </body>
 </html>
